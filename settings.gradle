@@ -1,0 +1,5 @@
+rootProject.name = 'my-all-in-one'
+include(':frontend')
+include(':backend')
+project(":frontend").projectDir = file('frontend')
+project(":backend").projectDir = file('backend')

@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/myallinone?allowPublicKeyRetrieval=true&useSSL=false;
+    username: root
+    password: 961104

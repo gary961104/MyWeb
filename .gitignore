@@ -1,0 +1,127 @@
+# 忽略 src/main/webapp 目錄下所有文件
+.gradle/
+.ideaDataSources
+
+# 忽略 camunda h2 test db
+camunda-db.h2.db
+camunda-db.lock.db
+
+# 忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+doc/*.txt
+npm-debug.log
+prodDb.lock.db
+prodDb.trace.db
+
+package-lock.json
+
+logs/**
+storage/**
+
+# User-specific stuff:
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
+
+# Sensitive or high-churn files:
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.xml
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+
+# Gradle:
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# CMake
+cmake-build-debug/
+
+# Mongo Explorer plugin:
+.idea/**/mongoSettings.xml
+
+## File-based project format:
+*.iws
+
+## Plugin-specific files:
+# IntelliJ
+out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Cursive Clojure plugin
+.idea/replstate.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+.idea/artifacts/
+.idea/httpRequests/
+.idea/jsLibraryMappings.xml
+.idea/junitgenerator-prj-settings.xml
+.idea/modules.xml
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+/target
+/build
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+/docs
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+/.history/
+/frontend/target/
+/backend/target/
+/frontend/node/
+/frontend/node_modules/
+/frontend/dist/
+/frontend_orig/
+/backend/bin/
+/backend/logs/
+/backend/config/
+
+# hprof
+*.hprof
+kendo-ui-license.txt
