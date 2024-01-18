@@ -32,9 +32,61 @@ public class TestController {
         // 测试反转前 k + 1 个字符
         String partialReversedString = reverser.reverse("World", 2);
         System.out.println("前 3 个字符反转：" + partialReversedString);
+        System.out.println(test3(true));
     }
 
+    @GetMapping(value = "test3")
+    public int test3(boolean flag){
+        try {
+            if (flag) {
+                return 1;
+            }
+        } finally {
+            System.out.println("finally...");
+        }
+        return 0;
+    }
+
+    @GetMapping(value = "test4")
+    public void test4(){
+        new DerivedObj();
+    }
+    @GetMapping(value = "test5")
+    public void test5(){
+        for(int i = 1; i <= 100; i++ ) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println("FizzBuzz");
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            }else if (i % 5 == 0) {
+                System.out.println("Buzz");
+            }else {
+                System.out.println(i);
+            }
+        }
+    }
 }
+
+
+
+class BaseObj{
+    static {
+        System.out.println("BaseObj static");
+    }
+    public BaseObj(){
+        System.out.println("BaseObj Constructor");
+    }
+}
+
+class DerivedObj extends BaseObj {
+    static {
+        System.out.println("DerivedObj static");
+    }
+    public DerivedObj() {
+        System.out.println("DerivedObj Constructor");
+    }
+}
+
 
 class SignUtils {
     private TreeMap<String, String> data;
