@@ -1,0 +1,10 @@
+package com.exampleware.repository;
+
+import com.exampleware.entity.WmsWareOrderTask;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface WmsWareOrderTaskRepository extends JpaRepository<WmsWareOrderTask, Long>, JpaSpecificationExecutor<WmsWareOrderTask> {
+}

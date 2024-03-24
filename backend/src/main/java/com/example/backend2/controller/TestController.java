@@ -7,7 +7,7 @@ import java.util.TreeMap;
 
 @RestController(value = "test")
 public class TestController {
-
+    public String output = " ";
     @GetMapping(value = "test1")
     public void test(){
         SignUtils signUtils = new SignUtils();
@@ -64,6 +64,36 @@ public class TestController {
                 System.out.println(i);
             }
         }
+    }
+
+    @GetMapping(value = "test6")
+    public void test6(){
+        foo(0);
+        foo(1);
+        System.out.println(output);
+    }
+
+    public void foo(int i) {
+        try {
+            if (i == 1) {
+                output += "1";
+                throw new Exception();
+            }
+            output += "11";
+            return;
+        } catch (Exception e) {
+            output += "2";
+            return;
+        } finally {
+            output += "3";
+        }
+//        output += "4";
+    }
+
+    @GetMapping(value = "test7")
+    public void test7(){
+        String a = "A";
+        a = "B";
     }
 }
 
@@ -132,4 +162,6 @@ class StringReverser {
         // 将反转后的前缀与剩余部分拼接
         return reversedPrefix.toString() + s.substring(k + 1);
     }
+
+
 }
