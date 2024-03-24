@@ -1,6 +1,6 @@
-package com.exampleware.repository;
+package com.example.ware.repository;
 
-import com.exampleware.entity.WmsWareOrderTaskDetail;
+import com.example.ware.entity.WmsWareOrderTaskDetail;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;

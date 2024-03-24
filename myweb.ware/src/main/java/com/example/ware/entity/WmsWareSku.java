@@ -1,13 +1,11 @@
-package com.exampleware.entity;
+package com.example.ware.entity;
 
 import lombok.*;
-import org.hibernate.proxy.HibernateProxy;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.util.Objects;
 
 @AllArgsConstructor
 @NoArgsConstructor

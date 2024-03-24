@@ -1,40 +1,39 @@
-package com.exampleware.entity;
+package com.example.ware.entity;
 
 import lombok.*;
-import org.hibernate.proxy.HibernateProxy;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.util.Objects;
+import java.math.BigDecimal;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "wms_ware_order_task_detail", schema = "wms")
-public class WmsWareOrderTaskDetail {
+@Table(name = "wms_purchase_detail", schema = "wms")
+public class WmsPurchaseDetail {
     @Id
     @Column(name = "id", nullable = false)
     private Long id;
 
+    @Column(name = "purchase_id")
+    private Long purchaseId;
+
     @Column(name = "sku_id")
     private Long skuId;
-
-    @Column(name = "sku_name")
-    private String skuName;
 
     @Column(name = "sku_num")
     private Integer skuNum;
 
-    @Column(name = "task_id")
-    private Long taskId;
+    @Column(name = "sku_price", precision = 18, scale = 4)
+    private BigDecimal skuPrice;
 
     @Column(name = "ware_id")
     private Long wareId;
 
-    @Column(name = "lock_status")
-    private Integer lockStatus;
+    @Column(name = "status")
+    private Integer status;
 
 }

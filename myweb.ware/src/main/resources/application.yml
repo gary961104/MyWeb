@@ -1,8 +1,8 @@
 server:
-  port: 10000
+  port: 11000
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/pms
+    url: jdbc:mysql://localhost:3306/wms
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
